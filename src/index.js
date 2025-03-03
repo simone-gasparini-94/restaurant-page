@@ -1,3 +1,4 @@
 import "./styles.css";
+import { loadContent } from "./load-content.js";
 
-console.log("Hello, world!");
+document.addEventListener("DOMContentLoaded", loadContent);
