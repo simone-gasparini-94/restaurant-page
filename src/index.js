@@ -1,4 +1,4 @@
 import "./styles.css";
-import { loadContent } from "./load-content.js";
+import { loadHome } from "./home.js";
 
-document.addEventListener("DOMContentLoaded", loadContent);
+document.addEventListener("DOMContentLoaded", loadHome);
