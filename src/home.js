@@ -1,5 +1,7 @@
 export function loadHome() {
     const content = document.querySelector("#content");
+    content.innerHTML = "";
+    
     const headline = document.createElement("h1");
     const text = document.createElement("p");
     headline.classList.add("headline");
