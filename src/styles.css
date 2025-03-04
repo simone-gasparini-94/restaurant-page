@@ -4,8 +4,16 @@
     padding: 0;
 }
 
+:root {
+    --bg-color: hsl(0, 0%, 96%);
+    --color: hsl(0, 0%, 4%);
+    --font-size: 18px;
+}
+
 body {
-    background-color: white;
+    background-color: var(--bg-color);
+    color: var(--color);
+    font-size: var(--font-size);
 
     display: flex;
     flex-direction: column;
@@ -13,12 +21,46 @@ body {
 
     height: 100vh;
 
-    padding: 40px 160px;
+    padding: 40px 80px;
 }
 
+button {
+    padding: 10px 20px;
+    background-color: var(--bg-color);
+
+    border: 0.5px solid black;
+    cursor: pointer;
+}
+
+button.active {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
 
 #content {
     text-align: center;
     margin-top: auto;
     margin-bottom: auto;
+}
+
+.home-container,
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.headline,
+.text,
+.item-title,
+.item-description,
+.label,
+.text {
+    max-width: 60ch;
 }

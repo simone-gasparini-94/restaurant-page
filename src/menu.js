@@ -1,6 +1,9 @@
 export function loadMenu() {
     const content = document.querySelector("#content");
     content.innerHTML = "";
+
+    const container = document.createElement("div");
+    container.classList.add("menu-container");
     
     const menuItems = [
         {
@@ -18,19 +21,20 @@ export function loadMenu() {
     ];
 
     menuItems.forEach(item => {
-        const menuItem = document.createElement("div");
-        menuItem.classList.add("menu-item");
+        const itemContainer = document.createElement("div");
+        itemContainer.classList.add("item-container");
 
         const title = document.createElement("h2");
-        title.classList.add("menu-title");
+        title.classList.add("item-title");
         title.textContent = item.name;
 
         const description = document.createElement("p");
-        description.classList.add("menu-description");
+        description.classList.add("item-description");
         description.textContent = item.description;
 
-        menuItem.append(title, description);
-        content.appendChild(menuItem);
-    }
-    )
+        itemContainer.append(title, description);
+        container.appendChild(itemContainer);
+    });
+
+    content.appendChild(container);
 }
